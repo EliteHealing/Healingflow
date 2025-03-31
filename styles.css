@@ -1,0 +1,182 @@
+/* Overall Body Style */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  overflow: hidden;
+  color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Starry Background */
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://www.transparenttextures.com/patterns/stardust.png');
+  background-size: cover;
+  animation: starField 5s infinite linear;
+  z-index: -1;
+}
+
+@keyframes starField {
+  0% { background-position: 0 0; }
+  100% { background-position: 100% 100%; }
+}
+
+/* Rocket Styles */
+.rocket {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 80px;
+  background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Rocket_Icon.svg/800px-Rocket_Icon.svg.png') no-repeat center center;
+  background-size: contain;
+  margin-top: -40px;
+  margin-left: -20px;
+  animation: rocketMove 15s infinite linear;
+  z-index: -1;
+}
+
+@keyframes rocketMove {
+  0% {
+    transform: translate(100px, -100px) rotate(0deg);
+  }
+  50% {
+    transform: translate(250px, -300px) rotate(180deg);
+  }
+  100% {
+    transform: translate(100px, -100px) rotate(360deg);
+  }
+}
+
+/* Space Station Styles */
+.space-station {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  background: url('https://upload.wikimedia.org/wikipedia/commons/2/2e/International_Space_Station.svg') no-repeat center center;
+  background-size: contain;
+  margin-top: -30px;
+  margin-left: -30px;
+  animation: stationMove 30s infinite linear;
+  z-index: -1;
+}
+
+@keyframes stationMove {
+  0% {
+    transform: rotate(0deg) translateX(400px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(400px) rotate(-360deg);
+  }
+}
+
+/* Main Content Area */
+.main-content {
+  position: absolute;
+  z-index: 3;
+  padding: 40px;
+  max-width: 800px;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  color: #fff;
+  text-align: center;
+  font-size: 1.2em;
+  line-height: 1.8;
+  z-index: 5;
+}
+
+/* Header Section Styling */
+header {
+  text-align: center;
+  padding: 10px;
+  color: white;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+/* About Section Styling */
+.info {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 1.2em;
+}
+
+/* Comment Section Styling */
+.comment {
+  background-color: #f0f8ff;
+  color: #333;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  font-size: 1.1em;
+  z-index: 4;
+}
+
+.comment span {
+  font-weight: bold;
+  color: #ff9800;
+}
+
+/* Footer Styling */
+footer {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  z-index: 3;
+  color: #fff;
+}
+
+/* Positioning user comments in the corners */
+.comment-top-left {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 200px;
+  z-index: 5;
+}
+
+.comment-top-right {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 200px;
+  z-index: 5;
+}
+
+.comment-bottom-left {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 200px;
+  z-index: 5;
+}
+
+.comment-bottom-right {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 200px;
+  z-index: 5;
+}
